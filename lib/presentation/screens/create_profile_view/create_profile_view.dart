@@ -19,13 +19,22 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Crear Perfil", style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900),
-          ),
+        title: const Text(
+          "Crear Perfil", 
+          style: TextStyle(
+            fontSize: 28, 
+            fontWeight: FontWeight.w900,
+            color: Colors.white,
+          ), 
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.blue,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
+            const SizedBox(height: 20,),
             CustomTextField(
               controller: nameController,
               labelText: 'Nombre',
@@ -41,8 +50,8 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
               controller: occupationController,
               labelText: 'Ocupación',
             ),
-            const SizedBox(height: 20),
-            ElevatedButton(
+            const SizedBox(height: 40),
+            ElevatedButton.icon(
               onPressed: () {
                 String name = nameController.text.trim();
                 String age = ageController.text.trim();
@@ -65,7 +74,16 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
                   );
                 }
               },
-              child: const Text('Guardar y Ver Perfil'),
+              icon: Icon(Icons.save_alt, size: 24),
+              label: Text('Guardar y Ver Perfil', style: TextStyle(fontSize: 18)),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue, 
+                foregroundColor: Colors.white,
+                minimumSize: Size(150, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              )
             ),
           ],
         ),
