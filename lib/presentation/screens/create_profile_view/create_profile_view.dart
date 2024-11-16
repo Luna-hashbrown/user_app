@@ -19,7 +19,8 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Crear Perfil'),
+        title: const Text("Crear Perfil", style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900),
+          ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -29,11 +30,13 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
               controller: nameController,
               labelText: 'Nombre',
             ),
+            const SizedBox(height: 20,),
             CustomTextField(
               controller: ageController,
               labelText: 'Edad',
               keyboardType: TextInputType.number,
             ),
+            const SizedBox(height: 20,),
             CustomTextField(
               controller: occupationController,
               labelText: 'Ocupación',

@@ -14,17 +14,15 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return 
     TextField(
       controller: controller,
       decoration: InputDecoration(
         labelText: labelText,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30.0))
+          borderRadius: BorderRadius.circular(20.0))
       ),
       keyboardType: keyboardType,
     );
-    
   }
 }

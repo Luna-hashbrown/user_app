@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/createProfile': (context) => const CreateProfileScreen(),
         '/profile': (context) => const ProfileScreen(),
       },
+      theme: ThemeData(fontFamily: "Poppins")
     );
   }
 }
