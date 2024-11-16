@@ -12,29 +12,44 @@ class HomeScreen extends StatelessWidget {
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.w900,
-            color: Colors.white, // Cambia el color del texto
+            color: Colors.white,
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.blue, // Cambia el color del fondo del AppBar
+        backgroundColor: Colors.blueGrey,
       ),
       body: Center(
-        child: ElevatedButton.icon(
-          onPressed: () {
-            Navigator.pushNamed(context, '/createProfile');
-          },
-          icon: Icon(Icons.group_add, size: 24),
-          label: Text('Crear Perfil', style: TextStyle(fontSize: 18)),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.blue, 
-            foregroundColor: Colors.white,
-            minimumSize: Size(150, 50),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              'Hola, para agregar tu perfil da click en el boton de abajo',
+              style: TextStyle(
+                fontSize: 20,
+                letterSpacing: 1.2,
+                color: Colors.black87
+              ),
             ),
-          ),
+            const SizedBox(height: 20),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, '/createProfile');
+              },
+              icon: Icon(Icons.group_add, size: 24),
+              label: Text('Crear Perfil', style: TextStyle(fontSize: 18)),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey, 
+                foregroundColor: Colors.white,
+                minimumSize: Size(150, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+            ),
+          ],
         ),
-      ),
+      )
     );
   }
 }

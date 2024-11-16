@@ -28,7 +28,7 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
           ), 
         ),
         centerTitle: true,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.blueGrey,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -68,16 +68,15 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
                     },
                   );
                 } else {
-                  // Mostrar un mensaje si faltan datos
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Por favor completa todos los campos')),
+                    const SnackBar(content: Text('Para continuar tienes que llenar todos los datos'), backgroundColor: Colors.redAccent),
                   );
                 }
               },
               icon: Icon(Icons.save_alt, size: 24),
               label: Text('Guardar y Ver Perfil', style: TextStyle(fontSize: 18)),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue, 
+                backgroundColor: Colors.blueGrey, 
                 foregroundColor: Colors.white,
                 minimumSize: Size(150, 50),
                 shape: RoundedRectangleBorder(

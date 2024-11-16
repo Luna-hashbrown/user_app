@@ -13,8 +13,16 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
     onPressed: onPressed,
-    icon: Icon(Icons.add), 
-    label: Text(text),
+    icon: Icon(Icons.keyboard_return, size: 24),
+    label: Text( text, style: TextStyle(fontSize: 18)),
+    style: ElevatedButton.styleFrom(
+      backgroundColor: Colors.blueGrey, 
+      foregroundColor: Colors.white,
+      minimumSize: Size(150, 50),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+      ),
+    )
   );
   }
 }

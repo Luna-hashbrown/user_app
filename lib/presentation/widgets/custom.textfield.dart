@@ -20,7 +20,9 @@ class CustomTextField extends StatelessWidget {
       decoration: InputDecoration(
         labelText: labelText,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20.0))
+          borderRadius: BorderRadius.circular(20.0)),
+        focusColor: Colors.blueGrey,
+        hoverColor: Colors.blueGrey,
       ),
       keyboardType: keyboardType,
     );

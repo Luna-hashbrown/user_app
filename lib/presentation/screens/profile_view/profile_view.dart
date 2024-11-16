@@ -11,17 +11,62 @@ class ProfileScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Perfil'),
+        title: const Text(
+          "Perfil",
+          style: TextStyle(
+            fontSize: 28,
+            fontWeight: FontWeight.w900,
+            color: Colors.white,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.blueGrey,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
+      body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center, 
+          crossAxisAlignment: CrossAxisAlignment.center, 
           children: [
-            Text('Nombre: ${userProfile['name']}', style: const TextStyle(fontSize: 18)),
-            Text('Edad: ${userProfile['age']}', style: const TextStyle(fontSize: 18)),
-            Text('Ocupación: ${userProfile['occupation']}', style: const TextStyle(fontSize: 18)),
-            const SizedBox(height: 20),
+            Icon(
+              Icons.account_circle, 
+              size: 150, 
+              color: Colors.blueGrey, 
+            ),
+            const SizedBox(height: 20), 
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0), 
+              child: Text(
+                'Nombre: ${userProfile['name']}',
+                style: const TextStyle(
+                  fontSize: 21,
+                  letterSpacing: 1.2,
+                  color: Colors.blue,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Text(
+                'Edad: ${userProfile['age']}',
+                style: const TextStyle(
+                  fontSize: 21,
+                  letterSpacing: 1.2,
+                  color: Colors.blueGrey,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Text(
+                'Ocupación: ${userProfile['occupation']}',
+                style: const TextStyle(
+                  fontSize: 21,
+                  letterSpacing: 1.2,
+                  color: Colors.black87,
+                ),
+              ),
+            ),
+            const SizedBox(height: 50),
             CustomButton(
               text: 'Regresar a Inicio',
               onPressed: () {
